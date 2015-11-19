@@ -12,6 +12,16 @@ J = 0;
 grad = zeros(size(theta));
 
 % ====================== YOUR CODE HERE ======================
+
+guess = X * theta
+
+J = -y .* log(guess) - (1 - y) .* log (1 - guess)
+% You need to return the following variables correctly 
+%J = c * sum ((xTheta - y) .^ 2);
+
+% cost(guess, y) = -y log(guess) - (1 - y)log (1 - guess), where guess = theta’ * x
+
+
 % Instructions: Compute the cost of a particular choice of theta.
 %               You should set J to the cost.
 %               Compute the partial derivatives and set grad to the partial
